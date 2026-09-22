@@ -103,7 +103,7 @@ body {
 
 
 .skill-badge {
-    background-color: #b6cde4;
+    background-color: #69a9e9;
     color: var(--primary-color);
     padding: 0.6rem 1rem;
     border-radius: 8px;
@@ -124,7 +124,7 @@ body {
 
 
 .project-card {
-    background: #f8fafc;
+    background: #3372b1;
     border: 1px solid #e2e8f0;
     border-left: 4px solid var(--accent-color);
     padding: 1.25rem;
@@ -156,11 +156,10 @@ body {
     cursor: pointer;
 }
 
-
 .project-card:hover {
     /* Efecto de levitación vertical */
     transform: translateY(-6px);
-    background-color: #ffffff;
+    background-color: #639cf1;
     box-shadow: var(--shadow-hover);
     border-color: #cbd5e1;
     border-left-color: var(--accent-hover);
@@ -169,11 +168,9 @@ body {
 .skill-badge:hover {
     background-color: var(--accent-color);
     color: #ffffff;
-    transform: translateY(+8px);
-    box-shadow: 0 14px 12px rgba(41, 66, 104, 0.31);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
 }
-
-
 .section-title {
     font-size: 1.3rem;
     color: var(--primary-color);
@@ -183,12 +180,13 @@ body {
 }
 
 
+
 .section-title::after {
     content: '';
     position: absolute;
     bottom: -4px;
     left: 0;
-    width: 20%;
+    width: 40%;
     height: 3px;
     background-color: var(--accent-color);
     border-radius: 2px;
@@ -198,34 +196,30 @@ body {
 .cv-section:hover .section-title::after {
     width: 100%;
 }
-            
-    transition: var(--transition-smooth);{
+            .section-title {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
 
 
-…        opacity: 1;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
         transform: translateY(0);
     }
+}
 
 .cv-container {
     /* Aplicación de la animación */
     animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
-
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(80px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .cv-container {
-        /* Aplicación de la animación */
-        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
 
 
 /* Modo Oscuro Automático */
@@ -244,3 +238,4 @@ body {
         --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
         --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
     }
+}
